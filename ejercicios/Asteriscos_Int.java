@@ -10,7 +10,7 @@ public class Asteriscos_Int {
 		for (int contador=0; contador < array1.length; contador++) 
 		{
 			//Posicion del array le asocia un aleatorio
-			array1[contador] = (int) (Math.random() * 10) + 1;  
+			array1[contador] = (int) (Math.random() * 10+1);  
 		}
 		for (int contador=0; contador < array1.length; contador++) 
 		{
