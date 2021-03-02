@@ -31,9 +31,24 @@ System.out.println(ut1.parImpar(8));
 
 System.out.println(ut1.nPrimos(v1.Precio()));
 System.out.println(ut1.parImpar(v1.Precio()));
-		
+
+//Constructores
+Vehiculo v2=new Vehiculo();
+v2.getBastidor();
+
+//Probar Constructor con parametros
+Vehiculo v3=new Vehiculo(2);
+v3.verDatos();
+
+Vehiculo v4=new Vehiculo("B");
+v4.verDatos();
+
+Vehiculo v5=new Vehiculo(190000,"bastido1");
+v5.verDatos();
+
+
+
 	}
 	
-		
 
 }

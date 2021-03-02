@@ -7,6 +7,73 @@ public class Vehiculo {
 	private int cv;
 	private double pvp;
 
+//Constructor para inicializar propiedades
+	Vehiculo()
+	{
+		this.ruedas=4;
+		tipo=0;
+		pvp=0;
+		cv=0;
+		bastidor="Sin bastidor";
+	}
+	
+	Vehiculo(int r)
+	{
+		this.ruedas=r;
+		tipo=0;
+		pvp=0;
+		cv=0;
+		bastidor="Sin bastidor";
+	}
+	
+//Constructor con variables	
+	Vehiculo(char p1)
+	{
+		switch(p1)
+		{
+		case 'A':
+			tipo=1;
+			ruedas=2;
+			break;
+		case 'B':
+			tipo=2;
+			ruedas=4;
+			break;
+		case 'C':
+			tipo=3;
+			ruedas=8;
+			break;
+		default:
+			ruedas=4;
+			tipo=0;
+		}
+		pvp=0;
+		cv=0;
+		bastidor="Sin bastidor";
+	}
+	
+//Constructor que inicialize PVP y Bastidor
+	Vehiculo (double pr1, String bs1)
+	{
+		this.pvp=pr1;
+		this.bastidor=bs1;
+		ruedas=4;
+		tipo=1;
+		cv=4;
+	}
+	
+	
+//verDatos()
+//print de todas las variables
+	public void verDatos()
+	{
+		System.out.println("Ruedas: "+ruedas);
+		System.out.println("Tipo: "+tipo);
+		System.out.println("Bastidor: "+bastidor);
+		System.out.println("CV: "+cv);
+		System.out.println("PVP: "+pvp);
+	}
+	
 //Getters and Setters	
 
 public int getTipo() {
@@ -57,5 +124,9 @@ public double Precio()
 		
 	return pvp+(pvp*(impuestos/100));
 }
+
+
+
+
 
 }
