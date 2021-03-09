@@ -12,6 +12,10 @@ public class Principal {
 		
 			//	t.numedia();
 		
+	Figura fig1=new Figura();
+	fig1.setLado1(10);
+fig1.setLado2(20);		
+System.out.println(fig1.area());
 		
 	}
 
