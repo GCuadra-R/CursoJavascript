@@ -29,7 +29,7 @@ public class Expediente {
 		}
 
 	}
-
+	
 	public String getTipo() {
 		return tipo;
 	}

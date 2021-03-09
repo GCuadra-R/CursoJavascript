@@ -21,5 +21,6 @@ public class Multa extends Expediente{
 	
 	public void verdatos() {
 		System.out.println("El importe de la multa del expediente: ");
+
 	}
 }

@@ -1,8 +1,8 @@
 package herencia;
 
 public class Principal {
-    public static void main(String[] args) {
-		
+    public static void main(String[] args){
+    }
 	
 	/*
 	Padre p1=new Padre(1,"hola");
@@ -36,9 +36,44 @@ public class Principal {
     	m1.verdatos();
     	m1.getImporte();
     
-  */ 
-    
-    	
-    	
+   
+    	Multa_Trafico mt1=new Multa_Trafico(1000, "B");
+    	mt1.setDescripcion("Saltar un ceda el paso");
+    	mt1.setResponsable("conductor");
+    	mt1.setMatricula("M111111");
+    	mt1.verdatos();
+  
+    	String saberTipo(Expediente c1) {
+    		if (c1 instanceof Expediente) {
+    			return "Eres Expediente";
+    		}
+    		if (c1 instanceof Multa) {
+    			return "Eres Multa";
+    		}
+    		if (c1 instanceof Multa_Trafico) {
+    			return "Eres Trafico";
+    		}
+    		if (c1 instanceof MultaCovid) {
+    			return "Eres covid";
+    		}
+
+    		return "No se";
+    	}
+    */
+    	public static String multaMayorImporte(Multa m1, Multa m2) {
+        	String cadena;
+        	if(m1.getImporte() > m2.getImporte()) {
+        		cadena = "El importe mayor es el de la multa: " + m1.getCodexpediente();
+        	 
+        	} else if(m1.getImporte() < m2.getImporte()) {
+        		cadena = "El importe mayor es el de la multa: " + m2.getCodexpediente();
+        	} else {
+        		cadena = "Ambas multas tienen el mismo importe";
+        	}
+        	return cadena;
+        }
+
+    	public String conocerTipo(Object x) {
+    		return "Eres de tipo --> "+x;
+    	}
     }
-}
