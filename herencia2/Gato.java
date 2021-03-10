@@ -2,24 +2,22 @@ package herencia2;
 
 public class Gato extends Animal{
 
-	private boolean castrado;
-	private char sexo;
-	public boolean isCastrado() {
-		return castrado;
+	private boolean ronronea;
+	
+	public boolean isRonronea() {
+		return ronronea;
 	}
-	public void setCastrado(boolean castrado) {
-		this.castrado = castrado;
+
+	public void setRonronea(boolean ronronea) {
+		this.ronronea = ronronea;
 	}
-	public char getSexo() {
-		return sexo;
-	}
-	public void setSexo(char sexo) {
-		this.sexo = sexo;
-	}
+
 	@Override
 	public String sonido(){
 		return "Miau";	
 	}
+	
+
 	
 	
 	

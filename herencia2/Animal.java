@@ -13,6 +13,8 @@ public class Animal {
 	
 	private int patas;
 	private String color;
+	public boolean castrado;
+	public char sexo;
 	
 //Getters and Setters	
 	public int getPatas() {
@@ -28,13 +30,31 @@ public class Animal {
 		this.color = color;
 	}
 	
-	//Metodos
-		public String sonido() {
-			return "no tengo sonido todavia";
+		public boolean isCastrado() {
+			return castrado;
 		}
-		@Override
-		public String toString() {
-			return "Es un animal de color:"+color+" y tiene "+patas+" patas";
+		public void setCastrado(boolean castrado) {
+			this.castrado = castrado;
+		}
+		public char getSexo() {
+			return sexo;
+		}
+		public void setSexo(char sexo) {
+			this.sexo = sexo;
 		}
 	
+//Metodos
+			public String sonido() {
+					return "no tengo sonido todavia";
+				}
+				@Override
+				public String toString() {
+					return "Es un animal de color:"+color+" y tiene "+patas+" patas";
+				}
+			
+//Generar un chip
+	public String chip() {
+		return "codigo-AA- "+ Math.random()*10;
+	}		
+		
 }
