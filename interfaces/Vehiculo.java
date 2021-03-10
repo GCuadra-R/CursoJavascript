@@ -2,10 +2,11 @@ package interfaces;
 
 public interface Vehiculo {
 
-	String frenar(int velocidad);
-	String acelerar();
-	double calcularPrecio(int pvp9);
+	int velocidad_maxima=120;
 	
-	int velocidad_maxima=20;
-	int velocidad=14;
+	//Declarar metodos
+	String frenar(int velocidad);
+	String acelerar(int velocidad);
+	double calcularPrecio(int pvp);
+	
 }
